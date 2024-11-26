@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap');
+
+* {
+    font-family: "Comfortaa", sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    transition: all 0.1s ease-in-out;
+    list-style-type: none;
+}
+
+.flex {
+    display: flex;
+}
+.dir-col {
+    flex-direction: column;
+}
+.container {
+    max-width: 110rem;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/*Introduction-related items*/
+
+#intro {
+    width: 100%;
+    overflow: hidden;
+}
+#intro .overlay {
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    width: 100%;
+}
+#intro .introduction {
+    color: white; 
+    background: rgba(0, 0, 0, 0.5);
+    padding: 2rem;
+    margin: 5rem 1rem 0;
+    border-radius: 1rem;
+    transition: all 0.28s ease-in-out;
+    z-index: 2;
+}
+#intro .introduction h1, #intro .introduction h3 {
+    margin-bottom: 0.7rem;
+}
+#intro .introduction p {
+    margin-bottom: 0.5rem;
+}
+#intro .introduction img {
+    float: left;
+    margin: 0 1rem 1rem 0;
+    border-radius: 50%;
+    width: 15rem;
+}
+#intro .video-container {
+    height: 35rem;
+    overflow: hidden;
+}
+#intro video {
+    width: 100%;
+    object-fit: contain;
+}
+#projects {
+    background-color: #123;
+    height: 100vh;
+}
+/*Transitions*/
+.scale-opacity-transition {
+    opacity: 100% !important;
+    scale: 100% !important;
+}
+
+#orbs-bg {
+    width: 100%;
+    height: 97vh;
+    position: relative;
+    top: 0
+}
+
+.anim {
+    opacity: 0;
+    transform: translateY(0.5rem);
+    animation: slideUp 0.8s forwards;
+  }
+  
+  @keyframes slideUp {
+    0% {
+      opacity: 0;
+      transform: translateY(0.5rem);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+/*Media*/
+@media (max-width: 1200px){
+    html {
+        font-size: 80%;
+    }
+    #orbs-bg {
+        width: 100%;
+        height: 95vh;
+      }
+}
