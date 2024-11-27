@@ -2,7 +2,7 @@ const projects = ['cakegame', 'nullworkbonelab', 'bananapeel', 'musicplayer', 'p
 
 // info divs
 const placeholder = document.querySelector('#placeholderinfo')
-const info = document.querySelector('#projectinfo')
+const info = document.querySelector('#wholeinfopack')
 
 // info 
 const pName = document.querySelector('#projectname')
@@ -53,6 +53,7 @@ const descriptions = new Map([
 addInteraction(projects)
 
 // functions
+
 function addInteraction(elements){
     elements.forEach(element => {
         let object = document.querySelector(`#${element}`)
@@ -64,6 +65,12 @@ function addInteraction(elements){
 
 function updateDescription(id){
     let desc = descriptions.get(id)
+    projects.forEach(element => {
+        if (element != id)
+            document.querySelector(`#${element}`).style.boxShadow = ''
+        else
+            document.querySelector(`#${element}`).style.boxShadow = '0 0 1rem 0.1rem #a096fc'       
+    });
     if (desc){
         pName.innerHTML = desc.name
         pDesc.innerHTML = desc.description

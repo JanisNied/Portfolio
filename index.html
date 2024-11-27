@@ -28,7 +28,7 @@
                     <div class="container">
                         <div class="introduction anim">
                             <img src="media/images/pfp.png" alt="my personal character" class="spin">
-                            <h1>Hello, I'm Janis!🌸</h1>
+                            <h1><span>Hello, I'm</span> <span class="myName">Janis</span><span>!</span>🌸</h1>
                             <h3>A bit about myself:</h3>
                             <p>I'm an aspiring 3rd year student at a technical school in Latvia</p>
                             <p>I speak 3 languages fluently: Latvian, English and Russian</p>
@@ -36,7 +36,7 @@
                              <p>I still have quite a bit of hands-on experience with web development (Full-Stack) - mostly focusing on experimentation rather than large projects</p>
                             <p>Most of my work I've put into modding games, experimenting with Unity and attempting to make models and room concepts/designs with Unity Probuilder and Blender</p>
                             <br>
-                            <h3>You can check some of my projects down below!</h3>
+                            <h3>You can check some of my projects <a class="randominteractdown" href="#projects">down</a> below!</h3>
                         </div>
                     </div>
                 </div>
@@ -73,10 +73,15 @@
                                 <h2>No project selected!</h2>
                                 <p>Try clicking one of the buttons to see some of my interesting (or not) projects!</p>
                             </div>
-                            <div id="projectinfo" class="none">
-                                <h2 id="projectname" class="anim">projectname</h2>
-                                <h3 id="projecttype" class="anim" style="--givenTime: 0.15s">type</h3>
-                                <p id="projectdesc" class="anim" style="--givenTime: 0.3s">description</p>
+                            <div class="flex dir-col none" id="wholeinfopack">
+                                <div id="projectinfo">
+                                    <h2 id="projectname" class="anim">projectname</h2>
+                                    <h3 id="projecttype" class="anim" style="--givenTime: 0.15s">type</h3>
+                                    <p id="projectdesc" class="anim" style="--givenTime: 0.3s">description</p>
+                                </div>
+                                <div>
+                                    <button id="projectgallery" class="anim" style="--givenTime: 0.45s"><i class="ti ti-photo-search"></i>Gallery</button>
+                                </div>
                             </div>
                         </div>
                     </div>
