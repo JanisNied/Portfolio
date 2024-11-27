@@ -75,8 +75,13 @@ function updateDescription(id){
         placeholderHidden = true
     }
     // how does this even work (reflow) this is just magic lol
-    info.style.opacity = 0.0
-    info.classList.remove("anim")
-    void info.offsetWidth
-    info.classList.add("anim")
+    let elementRestart = [pName, pDesc, pType]
+    elementRestart.forEach(element => {
+        element.style.opacity = 0.0
+        element.classList.remove('anim')
+        void element.offsetWidth
+    });
+    elementRestart.forEach(element => {
+        element.classList.add('anim')
+    });
 }
