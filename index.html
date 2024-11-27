@@ -5,8 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Janis' Portfolio</title>
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css"/>
+    <script src="scripts/script.js" defer></script>
 </head>
 <body>
+    <header>
+        <nav>
+            <ul class="flex hcenter">
+                <li><a href="#intro"><i class="ti ti-home"></i> Introduction</a></li>
+                <li><a href="#projects"><i class="ti ti-mist"></i> Projects</a></li>
+                <li><a href="#interests"><i class="ti ti-directions"></i> Other interests</a></li>
+            </ul>
+        </nav>
+    </header>
     <main class="flex dir-col">
         <section id="intro">
             <div class="video-container">
@@ -42,7 +53,7 @@
                         <div class="projectlist">
                             <p class="anim" style="--givenTime: 0.1s">Personal projects: </p>
                             <ul class="flex anim" style="--givenTime: 0.2s">
-                                <li class="" id="cakegame"><img src="media/images/cakegame.png"></li>
+                                <li id="cakegame"><img src="media/images/cakegame.png"></li>
                                 <li id="nullworkbonelab"><img src="media/images/nullwork.png"></li>
                                 <li id="bananapeel"><img src="media/images/bananapeel.webp"></li>
                                 <li id="musicplayer"><img src="media/images/headphone.png"></li>
@@ -58,12 +69,20 @@
                             </ul>
                         </div>
                         <div id="project-info" class="anim" style="--givenTime: 0.1s">
-                            <h2>No project selected!</h2>
-                            <p>Try clicking one of the buttons to see some of my interesting (or not) projects!</p>
+                            <div id="placeholderinfo">
+                                <h2>No project selected!</h2>
+                                <p>Try clicking one of the buttons to see some of my interesting (or not) projects!</p>
+                            </div>
+                            <div id="projectinfo" class="none">
+                                <h2 id="projectname" class="anim">projectname</h2>
+                                <h3 id="projecttype" class="anim" style="--givenTime: 0.15s">type</h3>
+                                <p id="projectdesc" class="anim" style="--givenTime: 0.3s">description</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <div class="space"></div>
         </section>
     </main>  
 </body>

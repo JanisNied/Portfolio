@@ -12,11 +12,15 @@
     transition: all 0.2s ease-in-out;
     list-style-type: none;
 }
-body {
-    background-color: #123;
-}
+
 .flex {
     display: flex;
+}
+.block {
+    display: block;
+}
+.none {
+    display: none;
 }
 .dir-col {
     flex-direction: column;
@@ -24,21 +28,52 @@ body {
 .wrap {
     flex-wrap: wrap;
 }
+.hcenter {
+    justify-content: center;
+}
 .container {
     max-width: 110rem;
     margin: 0 auto;
     width: 100%;
 }
 
+
+/*semantic elements, etc.*/
+body {
+    background-color: #123;
+}
+header {
+    color: #fff;
+    font-weight: bold;
+    padding: 0.8rem;
+    box-sizing: padding-box;
+}
+header ul {
+    gap: 5rem;
+}
+header ul li:hover {
+    transform: translateY(-0.2rem);
+    box-shadow: 0 0.1rem 0 0 #fff; 
+}
+header ul li a:hover {
+    text-shadow: rgb(255, 241, 183) 1px 0 10px;
+}
+header ul .ti {
+    font-size: 1.2rem;
+}
+header ul li a {
+    color: #fff;
+}
 /*Introduction-related items*/
 
 #intro {
     width: 100%;
+    height: 100vh;
     overflow: hidden;
 }
 #intro .overlay {
     position: absolute; 
-    top: 0; 
+    top: 25%; 
     left: 0; 
     width: 100%;
 }
@@ -64,19 +99,20 @@ body {
     width: 15rem;
 }
 #intro .video-container {
-    height: 35rem;
+    height: 100rem;
     overflow: hidden;
 }
 #intro video {
     width: 100%;
-    object-fit: contain;
 }
+/* projects */
 #projects {
     background-color: #123;
     height: 100vh;
     color: #fff;
     padding: 4rem;
     margin-bottom: 2rem;
+    overflow: hidden;
 }
 #projects h1 {
    font-size: 3rem;
@@ -120,6 +156,10 @@ body {
 #projects #project-info h2 {
     margin-bottom: 1rem;
 }
+#projects #project-info h3 {
+    margin-bottom: 2rem;
+}
+
 /*animations*/
 
 .anim {
@@ -141,7 +181,7 @@ body {
 }
 
 /*Media queries*/
-@media (max-width: 1730px){
+@media (max-width: 1900px){
     #projects .projectlist {
         text-align: center;
         margin: 0 auto;
@@ -159,24 +199,56 @@ body {
         justify-content: center;
     }
 }
+@media (max-width: 1688px){
+    #intro video {
+        scale: 2;
+    }
+}
 @media (max-width: 1200px){
     html {
         font-size: 80%;
+    }
+    #intro video {
+        scale: 3;
+    }
+}
+@media (max-width: 860px){
+    #intro video {
+        scale: 6;
     }
 }
 @media (max-width: 726px){
     html {
         font-size: 60%;
     }
+}
+@media (max-width: 500px){
     #intro video {
-        scale: 2;
+        scale: 8;
     }
 }
-@media (max-width: 410px){
-    #intro video {
-        scale: 2.5;
+
+/* space bg, credits to https://codepen.io/TheRealAlan/pen/dyBgmV - thank you for making this! i love it*/
+@keyframes spin {
+  
+    from {
+      transform: rotate( 0deg );
     }
-    #intro .video-container {
-        height: 38rem;
+    
+    to {
+      transform: rotate( 360deg );
     }
-}
+  }
+  .space {
+    width: 400vw;
+    height: 400vh;
+    top: 50%;
+    left: 50%;
+    margin-top: -200vh;
+    margin-left: -200vw;
+    animation: spin 240s linear infinite;
+    background-size: 15rem;
+    backface-visibility: visible;
+    pointer-events: none;
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJMYXllcl8yIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDI0MCAyNDAiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDI0MCAyNDAiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxyZWN0IHg9IjEwNiIgeT0iOTAiIGZpbGw9IiNGRkZGRkYiIHdpZHRoPSIyIiBoZWlnaHQ9IjIiLz48cmVjdCB4PSI3NCIgeT0iNjMiIGZpbGw9IiNGRkZGRkYiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiLz48cmVjdCB4PSIyMyIgeT0iNjYiIGZpbGw9IiNGRkZGRkYiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiLz48cmVjdCB4PSI1MCIgeT0iMTEwIiBmaWxsPSIjRkZGRkZGIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIi8+PHJlY3QgeD0iNjMiIHk9IjEyOCIgZmlsbD0iI0ZGRkZGRiIgd2lkdGg9IjEiIGhlaWdodD0iMSIvPjxyZWN0IHg9IjQ1IiB5PSIxNDkiIGZpbGw9IiNGRkZGRkYiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiLz48cmVjdCB4PSI5MiIgeT0iMTUxIiBmaWxsPSIjRkZGRkZGIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIi8+PHJlY3QgeD0iNTgiIHk9IjgiIGZpbGw9IiNGRkZGRkYiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiLz48cmVjdCB4PSIxNDciIHk9IjMzIiBmaWxsPSIjRkZGRkZGIiB3aWR0aD0iMiIgaGVpZ2h0PSIyIi8+PHJlY3QgeD0iOTEiIHk9IjQzIiBmaWxsPSIjRkZGRkZGIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIi8+PHJlY3QgeD0iMTY5IiB5PSIyOSIgZmlsbD0iI0ZGRkZGRiIgd2lkdGg9IjEiIGhlaWdodD0iMSIvPjxyZWN0IHg9IjE4MiIgeT0iMTkiIGZpbGw9IiNGRkZGRkYiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiLz48cmVjdCB4PSIxNjEiIHk9IjU5IiBmaWxsPSIjRkZGRkZGIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIi8+PHJlY3QgeD0iMTM4IiB5PSI5NSIgZmlsbD0iI0ZGRkZGRiIgd2lkdGg9IjEiIGhlaWdodD0iMSIvPjxyZWN0IHg9IjE5OSIgeT0iNzEiIGZpbGw9IiNGRkZGRkYiIHdpZHRoPSIzIiBoZWlnaHQ9IjMiLz48cmVjdCB4PSIyMTMiIHk9IjE1MyIgZmlsbD0iI0ZGRkZGRiIgd2lkdGg9IjIiIGhlaWdodD0iMiIvPjxyZWN0IHg9IjEyOCIgeT0iMTYzIiBmaWxsPSIjRkZGRkZGIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIi8+PHJlY3QgeD0iMjA1IiB5PSIxNzQiIGZpbGw9IiNGRkZGRkYiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiLz48cmVjdCB4PSIxNTIiIHk9IjIwMCIgZmlsbD0iI0ZGRkZGRiIgd2lkdGg9IjEiIGhlaWdodD0iMSIvPjxyZWN0IHg9IjUyIiB5PSIyMTEiIGZpbGw9IiNGRkZGRkYiIHdpZHRoPSIyIiBoZWlnaHQ9IjIiLz48cmVjdCB5PSIxOTEiIGZpbGw9IiNGRkZGRkYiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiLz48cmVjdCB4PSIxMTAiIHk9IjE4NCIgZmlsbD0iI0ZGRkZGRiIgd2lkdGg9IjEiIGhlaWdodD0iMSIvPjwvc3ZnPg==);
+  }
