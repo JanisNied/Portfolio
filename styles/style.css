@@ -9,15 +9,20 @@
     border: none;
     text-decoration: none;
     scroll-behavior: smooth;
-    transition: all 0.1s ease-in-out;
+    transition: all 0.2s ease-in-out;
     list-style-type: none;
 }
-
+body {
+    background-color: #123;
+}
 .flex {
     display: flex;
 }
 .dir-col {
     flex-direction: column;
+}
+.wrap {
+    flex-wrap: wrap;
 }
 .container {
     max-width: 110rem;
@@ -69,24 +74,59 @@
 #projects {
     background-color: #123;
     height: 100vh;
+    color: #fff;
+    padding: 4rem;
+    margin-bottom: 2rem;
 }
-/*Transitions*/
-.scale-opacity-transition {
-    opacity: 100% !important;
-    scale: 100% !important;
+#projects h1 {
+   font-size: 3rem;
+   margin-bottom: 1rem;
 }
-
-#orbs-bg {
+#projects ul {
+    gap: 1rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+}
+#projects p {
+    margin-bottom: 1rem;
+}
+#projects li {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 1rem;
+    border-radius: 10%;
+}
+#projects li:hover {
+    transform: translateY(-0.2rem);
+    box-shadow: 0 0 1rem 0.1rem #fff;
+}
+#projects li img {
+    width: 3.5rem;
+    height: 3.5rem;
+}
+#projects .projectlist {
+    width: 30rem;
+}
+#projects .information {
+    gap: 10rem;
+}
+#projects #project-info {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 1rem;
+    max-width: 70rem;
+    height: 45rem;
     width: 100%;
-    height: 97vh;
-    position: relative;
-    top: 0
+    padding: 2rem;
 }
+#projects #project-info h2 {
+    margin-bottom: 1rem;
+}
+/*animations*/
 
 .anim {
     opacity: 0;
     transform: translateY(0.5rem);
     animation: slideUp 0.8s forwards;
+    animation-delay: var(--givenTime);
   }
   
   @keyframes slideUp {
@@ -98,14 +138,45 @@
       opacity: 1;
       transform: translateY(0);
     }
-  }
-/*Media*/
+}
+
+/*Media queries*/
+@media (max-width: 1730px){
+    #projects .projectlist {
+        text-align: center;
+        margin: 0 auto;
+    }
+    #projects ul {
+        justify-content: center;
+    }
+    #projects #projectinfo {
+        text-align: left !important;
+    }
+    #projects .title {
+        text-align: center;
+    }
+    #projects .information {
+        justify-content: center;
+    }
+}
 @media (max-width: 1200px){
     html {
         font-size: 80%;
     }
-    #orbs-bg {
-        width: 100%;
-        height: 95vh;
-      }
+}
+@media (max-width: 726px){
+    html {
+        font-size: 60%;
+    }
+    #intro video {
+        scale: 2;
+    }
+}
+@media (max-width: 410px){
+    #intro video {
+        scale: 2.5;
+    }
+    #intro .video-container {
+        height: 38rem;
+    }
 }

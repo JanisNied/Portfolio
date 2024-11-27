@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Janis' Portfolio</title>
     <link rel="stylesheet" href="styles/style.css">
-    <link rel="stylesheet" href="styles/circles.css">
-    <script src="scripts/Orbs.js" defer></script>
 </head>
 <body>
     <main class="flex dir-col">
@@ -18,7 +16,7 @@
                 <div class="overlay">
                     <div class="container">
                         <div class="introduction anim">
-                            <img src="media/images/pfp.png" alt="my personal character">
+                            <img src="media/images/pfp.png" alt="my personal character" class="spin">
                             <h1>Hello, I'm Janis!🌸</h1>
                             <h3>A bit about myself:</h3>
                             <p>I'm an aspiring 3rd year student at a technical school in Latvia</p>
@@ -36,7 +34,34 @@
         <section id="projects">
             <div class="bg">
                 <div class="container">
-                    <p>help</p>
+                    <div class="title">
+                        <h1>Projects</h1>
+                        <p>Here's a list of some things I've done!</p>
+                    </div>
+                    <div class="information flex wrap">
+                        <div class="projectlist">
+                            <p class="anim" style="--givenTime: 0.1s">Personal projects: </p>
+                            <ul class="flex anim" style="--givenTime: 0.2s">
+                                <li class="" id="cakegame"><img src="media/images/cakegame.png"></li>
+                                <li id="nullworkbonelab"><img src="media/images/nullwork.png"></li>
+                                <li id="bananapeel"><img src="media/images/bananapeel.webp"></li>
+                                <li id="musicplayer"><img src="media/images/headphone.png"></li>
+                            </ul>
+                            <p class="anim" style="--givenTime: 0.3s">School projects: </p>
+                            <ul class="flex anim" style="--givenTime: 0.4s">
+                                <li id="pizza"><img src="media/images/pizza.png"></li>
+                                <li id="customizer"><img src="media/images/tophat.png"></li>
+                            </ul>
+                            <p class="anim" style="--givenTime: 0.5s">Work in progress: </p>
+                            <ul class="flex anim" style="--givenTime: 0.6s">
+                                <li id="scprecreation"><img src="media/images/scp.png"></li>
+                            </ul>
+                        </div>
+                        <div id="project-info" class="anim" style="--givenTime: 0.1s">
+                            <h2>No project selected!</h2>
+                            <p>Try clicking one of the buttons to see some of my interesting (or not) projects!</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
