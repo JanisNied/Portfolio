@@ -9,10 +9,12 @@
     border: none;
     text-decoration: none;
     scroll-behavior: smooth;
-    transition: all 0.2s ease-in-out;
+    transition: all 0.2s cubic-bezier(.65,.05,.36,1);
     list-style-type: none;
 }
-
+body, html {
+    overflow-x: hidden;
+}
 .flex {
     display: flex;
 }
@@ -39,11 +41,10 @@
     margin: 0 auto;
     width: 100%;
 }
-
-body {
-    overflow-y: scroll;
+/* .webWrapper {
     overflow-x: hidden;
-}
+    position: relative;
+} */
 
 /*stuff*/
 a {
