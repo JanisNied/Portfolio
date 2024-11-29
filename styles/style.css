@@ -12,7 +12,7 @@
     transition: all 0.2s cubic-bezier(.65,.05,.36,1);
     list-style-type: none;
 }
-.webWrapper {
+.siteWrapper {
     overflow: hidden;
 }
 body, html {
