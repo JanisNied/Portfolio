@@ -13,7 +13,7 @@
     list-style-type: none;
 }
 .siteWrapper {
-    overflow: hidden;
+    overflow-x: hidden;
     position: relative;
 }
 body, html {
@@ -102,7 +102,7 @@ header ul li a {
 }
 #intro .overlay {
     position: absolute; 
-    top: 25%; 
+    top: 8%; 
     left: 0; 
     width: 100%;
 }
