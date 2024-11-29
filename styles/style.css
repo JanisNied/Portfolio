@@ -14,6 +14,7 @@
 }
 .siteWrapper {
     overflow: hidden;
+    position: relative;
 }
 body, html {
     overflow-x: hidden;
