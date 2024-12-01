@@ -65,7 +65,7 @@ a {
     color: #fff;
 }
 span {
-    text-shadow: rgb(255, 241, 183) 1px 0 10px;
+    text-shadow: rgb(255, 241, 183) 0.0625rem 0 0.625rem;
 }
 body {
     background-color: #123;
@@ -86,7 +86,7 @@ header ul li:hover {
     box-shadow: 0 0.1rem 0 0 #fff; 
 }
 header ul li a:hover {
-    text-shadow: rgb(255, 241, 183) 1px 0 10px;
+    text-shadow: rgb(255, 241, 183) 0.0625rem 0 0.625rem;
 }
 header ul .ti {
     font-size: 1.2rem;
@@ -95,12 +95,12 @@ header ul li a {
     color: #fff;
 }
 .randominteractdown:hover {
-    text-shadow: rgb(255, 241, 183) 1px 0 10px;
+    text-shadow: rgb(255, 241, 183) 0.0625rem 0 0.625rem;
     cursor: pointer;
 }
 .myName {
     color: rgb(252, 153, 255);
-    text-shadow: rgb(252, 153, 255) 1px 0 10px;
+    text-shadow: rgb(252, 153, 255) 0.0625rem 0 0.625rem;
 }
 /*Introduction-related items*/
 
@@ -232,7 +232,7 @@ header ul li a {
     right: 1.2rem;
 }
 #projects #projectgallery:hover {
-    text-shadow: rgb(255, 241, 183) 1px 0 10px;
+    text-shadow: rgb(255, 241, 183) 0.0625rem 0 0.625rem;
     cursor: pointer;
 }
 /*logos*/
@@ -277,7 +277,7 @@ header ul li a {
     z-index: 7;
 }
 #gallery #alternativeExit:hover {
-    text-shadow: rgb(255, 241, 183) 1px 0 10px;
+    text-shadow: rgb(255, 241, 183) 0.0625rem 0 0.625rem;
 }
 #gallery #allImages {
     padding: 1rem;
@@ -304,7 +304,7 @@ header ul li a {
     display: none;
     position: fixed; 
     z-index: 12; 
-    padding-top: 100px; 
+    padding-top: 6.25rem; 
     left: 0;
     top: 0;
     width: 100%;
@@ -318,7 +318,7 @@ header ul li a {
     margin: auto;
     display: block;
     width: 80%;
-    max-width: 1200px;
+    max-width: 75rem;
     z-index: 11;
   }
   
@@ -344,7 +344,7 @@ header ul li a {
   /* 100% Image Width on Smaller Screens */
   @media only screen and (max-width: 700px){
     .modal-content {
-        max-width: 700px;
+        max-width: 43.75rem;
     }
   }
 
