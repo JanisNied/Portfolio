@@ -17,6 +17,9 @@ const allImages = document.querySelector('#imageContainer')
 const exitTrigger = document.querySelector('#exitTrigger')
 const contentHolder = document.querySelector('#contentholder')
 const errorMessage = document.querySelector('#nofilesavailable') 
+const modal = document.querySelector("#myModal");
+const modalImg = modal.querySelector('#img01')
+const modalExitTrigger = modal.querySelector('#modalExitTrigger')
 
 // info 
 const pName = document.querySelector('#projectname')
@@ -81,7 +84,7 @@ const descriptions = new Map([
 ])
 
 // main logic
-addInteraction(projects, galleryButton, galleryExitButton)
+addInteraction()
 
 // functions
 
@@ -107,6 +110,11 @@ function openGallery(current){
                 let newElement = document.createElement('div')
                 newElement.classList.add('image')
                 newElement.style.backgroundImage = `url('${descriptions.get(current).screenshotDir}${i+1}.png')`
+                newElement.classList.add('pointer')
+                newElement.onclick = () => {
+                    modal.style.display = 'block'
+                    modalImg.src = `${descriptions.get(current).screenshotDir}${i+1}.png`
+                }
                 allImages.appendChild(newElement)
             }
         }
@@ -126,8 +134,8 @@ function closeGallery(current){
     gallery.classList.add('zeroevents')
 }
 
-function addInteraction(elements, galleryButton, galleryExitButton){
-    elements.forEach(element => {
+function addInteraction(){
+    projects.forEach(element => {
         let object = document.querySelector(`#${element}`)
         object.addEventListener('click', () => {
             updateDescription(element)
@@ -151,6 +159,9 @@ function addInteraction(elements, galleryButton, galleryExitButton){
     });
     exitTrigger.addEventListener('click', () => {
         closeGallery(currentlySelected)
+    })
+    modalExitTrigger.addEventListener('click', () => {
+        modal.style.display = 'none'
     })
 }
 
