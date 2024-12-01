@@ -272,7 +272,7 @@ header ul li a {
     position: fixed;
     top: .2rem;
     left: .2rem;
-    font-size: 2rem;
+    font-size: 4rem;
     cursor: pointer;
     z-index: 7;
 }
