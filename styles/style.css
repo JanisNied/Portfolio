@@ -608,3 +608,40 @@ header ul li a {
  .card-entity h2 {
     margin-bottom: 1rem;
  }
+ .loadingScreen {
+    position: fixed;
+    z-index: 25;
+    width: 100%;
+    height: 100vh;
+    background-color: #123;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  /* from css-loaders.com */
+.loader {
+    width: 100px;
+    aspect-ratio: 1;
+    display: grid;
+    border: 4px solid #0000;
+    border-radius: 50%;
+    border-right-color: #fff;
+    animation: l15 1s infinite linear;
+  }
+  .loader::before,
+  .loader::after {    
+    content: "";
+    grid-area: 1/1;
+    margin: 2px;
+    border: inherit;
+    border-radius: 50%;
+    animation: l15 2s infinite;
+  }
+  .loader::after {
+    margin: 8px;
+    animation-duration: 3s;
+  }
+  @keyframes l15{ 
+    100%{transform: rotate(1turn)}
+  }
+  

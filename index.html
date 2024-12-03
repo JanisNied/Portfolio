@@ -10,6 +10,9 @@
     <link rel="shortcut icon" href="media/images/favicon.png" type="image/x-icon">
 </head>
     <body>
+        <div class="loadingScreen">
+            <div class="loader"></div>
+        </div>
         <div id="myModal" class="modal">
             <div class="flex vcenter hcenter">
                 <img class="modal-content" id="img01">
@@ -52,8 +55,7 @@
         <main class="flex dir-col">
             <section id="intro">
                 <div class="video-container">
-                    <video autoplay loop muted>
-                        <source src="media/videos/bg.mp4" type="video/mp4">      
+                    <video autoplay loop muted src="media/videos/bg.mp4">   
                     </video>
                     <img src="media/images/fallback.png">
                     <div class="overlay">

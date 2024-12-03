@@ -26,6 +26,8 @@ const pName = document.querySelector('#projectname')
 const pDesc = document.querySelector('#projectdesc')
 const pType = document.querySelector('#projecttype')
 
+let loadingScreen = document.querySelector(".loadingScreen");
+
 
 let placeholderHidden = false
 
@@ -128,7 +130,7 @@ function openGallery(current){
     /*${repoName}/ add this later*/
 
 } 
-function closeGallery(current){
+function closeGallery(){
     gallery.classList.remove('fadein')
     gallery.classList.toggle('vanish')
     gallery.classList.add('zeroevents')
@@ -163,6 +165,13 @@ function addInteraction(){
     modalExitTrigger.addEventListener('click', () => {
         modal.style.display = 'none'
     })
+    window.addEventListener('load', function() {
+        loadingScreen.classList.add('vanish')
+       
+      }) 
+      loadingScreen.addEventListener('animationend', function() {
+        loadingScreen.style.display = 'none';
+    });       
 }
 
 function updateDescription(id){
