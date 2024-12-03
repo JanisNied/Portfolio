@@ -12,6 +12,22 @@
     transition: all 0.2s cubic-bezier(.65,.05,.36,1);
     list-style-type: none;
 }
+.scrollable::-webkit-scrollbar,  #allImages::-webkit-scrollbar, .card-entity::-webkit-scrollbar {
+    height: 0;
+    background-clip: content-box;
+    width: .4rem;
+  }
+  
+  
+.scrollable::-webkit-scrollbar-thumb, #allImages::-webkit-scrollbar-thumb, .card-entity::-webkit-scrollbar-thumb {
+    background-color: #ffffff6e;
+    border-radius: 0.5rem;
+    width: .001rem;
+}
+  
+.scrollable::-webkit-scrollbar-thumb:hover, #allImages::-webkit-scrollbar-thumb:hover, .card-entity::-webkit-scrollbar-thumb:hover {
+    background-color: #ffffffd0;
+  }
 .siteWrapper {
     overflow-x: hidden;
     position: relative;
@@ -302,6 +318,7 @@ header ul li a {
 }
 #gallery #imageContainer {
     gap: 1rem;
+    overflow-x: hidden;
     z-index: 7;
 }
 #gallery .image {
