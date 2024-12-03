@@ -560,6 +560,10 @@ header ul li a {
           font-size: 2em;
           transform: rotate(0deg) skew(-5deg);
         }
+        .card__head span {
+            text-shadow: var(--givenColorCard) 0.0625rem 0 0.625rem !important;
+            color: var(--givenColorCard) !important;
+         }
       }
       img {
         width: 100%;
