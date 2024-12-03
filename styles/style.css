@@ -543,7 +543,6 @@ header ul li a {
         .card-entity {
             transition-delay: 0.3s;
             opacity: 1.0;
-
         }
         .card-entity > * {
             transform: skew(-5deg);
