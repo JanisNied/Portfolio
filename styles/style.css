@@ -454,12 +454,22 @@ header ul li a {
         font-size: 60%;
     }
 }
+@media (max-width: 600px) {
+    #interests {
+        height: 80vh;
+    }
+}
 @media (max-width: 500px){
     #intro video {
         scale: 8;
     }
     #allImages {
         width: 100%;
+    }
+}
+@media (max-width: 400px) {
+    #interests {
+        height: 75vh;
     }
 }
 
