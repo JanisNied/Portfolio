@@ -406,8 +406,8 @@ header ul li a {
     #projects #projectinfo {
         text-align: left !important;
     }
-    #projects .title {
-        text-align: center;
+    .title {
+        text-align: center !important;
     }
     #projects .information {
         justify-content: center;
