@@ -16,6 +16,9 @@
     overflow-x: hidden;
     position: relative;
 }
+.centerAlign {
+    text-align: center !important;
+}
 body, html {
     overflow-x: hidden;
 }
@@ -210,13 +213,20 @@ header ul li a {
     overflow-y: scroll;
     height: 40rem;
 }
-#projectinfo a {
+#projectinfo a, #interests a {
     display: inline-block;
     cursor: pointer;
 }
-#projectinfo a:hover {
+#projectinfo a:hover{
     text-shadow: var(--givenColor) 0rem 0 2rem;
     transform: translateY(-0.2rem);
+} 
+#interests a:hover {
+    text-shadow: var(--givenColor) 0rem 0 2rem;
+    transform: translateX(0.5rem);
+}
+#interests ul li {
+    margin: 0.2rem 0 0.5rem 1rem;
 }
 #projectdesc {
     line-height: 2rem;
@@ -545,7 +555,7 @@ header ul li a {
             opacity: 1.0;
         }
         .card-entity > * {
-            transform: skew(-5deg);
+            transform: skew(-3deg);
         }
         flex-grow: 20;
         img {
@@ -558,7 +568,7 @@ header ul li a {
           color: rgb(252, 153, 255);
           background: rgba(0, 0, 0, 0.5);
           font-size: 2em;
-          transform: rotate(0deg) skew(-5deg);
+          transform: rotate(0deg) skew(1deg);
         }
         .card__head span {
             text-shadow: var(--givenColorCard) 0.0625rem 0 0.625rem !important;
@@ -582,13 +592,14 @@ header ul li a {
     position: absolute;
     top: 0;
     left: 0;
-    margin: 2rem;
+    margin: 2rem 2rem;
     background: rgba(0, 0, 0, 0.8);
     border-radius: 0.5rem;
     height: calc(100% - 8rem);
     width: calc(100% - 4rem);
     opacity: 0.0;
     padding: 2rem;
+    overflow-y: scroll;
  } 
  .card-entity h2 {
     margin-bottom: 1rem;
