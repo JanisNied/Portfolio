@@ -96,6 +96,7 @@ header ul .ti {
 }
 header ul li a {
     color: #fff;
+    padding: 0.8rem;
 }
 .randominteractdown:hover {
     text-shadow: rgb(255, 241, 183) 0.0625rem 0 0.625rem;
@@ -244,6 +245,9 @@ header ul li a {
 #projects #projectgallery:hover {
     text-shadow: rgb(255, 241, 183) 0.0625rem 0 0.625rem;
     cursor: pointer;
+}
+#projects #projectdesc img {
+    width:30%;height:30%;float:var(--floatVal);margin:1rem;border-radius:0.5rem
 }
 /*logos*/
 .logo {
