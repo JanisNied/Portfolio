@@ -176,6 +176,7 @@ header ul li a {
 #interests {
     height: 100vh;
     z-index: 1;
+   
 }
 #projects h1, #interests h1 {
    font-size: 3rem;
@@ -555,6 +556,7 @@ header ul li a {
       transition: all 1s ease-in-out;
       height: 75vmin;
       position: relative;
+      z-index: 15;
       .card__head {
         color: rgb(255, 255, 255);
         background: rgba(0, 0, 0, 0.692);
